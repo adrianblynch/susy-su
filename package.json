@@ -1,0 +1,22 @@
+{
+  "name": "susy-su",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack -w",
+    "dev": "webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.8.0",
+    "normalize.css": "^4.1.1",
+    "sass-loader": "^3.2.1",
+    "style-loader": "^0.13.1",
+    "susy": "^2.2.12",
+    "webpack": "^1.13.1"
+  }
+}
