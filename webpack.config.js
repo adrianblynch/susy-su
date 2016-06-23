@@ -3,10 +3,12 @@ module.exports = {
 	output: {
 		filename: './bundle.js'
 	},
-	loaders: [
-		{
-			test: /\.scss$/,
-			loaders: ['style', 'css', 'sass']
-		}
-	]
+	module: {
+		loaders: [
+			{
+				test: /\.scss$/,
+				loaders: ["style", "css", "sass"]
+			}
+		]
+	}
 }

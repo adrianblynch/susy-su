@@ -1,6 +1,33 @@
+// @import "~normalize.css/normalize.css";
+@import "~susy/sass/susy";
+
+$border: solid 1px black;
+
+$susy: (
+	global-box-sizing: border-box, /* This should allow left/right borders to not impact layout */
+	gutters: 0,
+);
+
 body {
 	background-color: #eee;
-	h1 {
-		border-bottom: solid 1px black;
-	}
+}
+
+h1 {
+	border-bottom: $border;
+}
+
+.page {
+	@include span(3 of 4);
+	padding: 0px;
+	border-top: $border;
+	border-bottom: $border;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+}
+
+.sidebar {
+	@include span(1 of 4);
+	padding: 0px;
+	border-top: $border;
+	border-bottom: $border;
 }
