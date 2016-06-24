@@ -27,3 +27,53 @@ h1 {
 	background-color: #99f;
 	text-align: right;
 }
+
+/* Collapsing margins */
+
+.margins {
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.margins:last-child {
+	margin-bottom: 0px;
+}
+
+.margins.x {
+	border: dotted 1px black;
+}
+
+.margins.y {
+	border: solid 1px black;
+}
+
+.margins.z {
+	border: dashed 1px black;
+}
+
+/* Push */
+
+.push {
+	border: solid 1px #ccc;
+	overflow: hidden;
+	padding: 10px 0px;
+}
+
+.push.x {
+	border: dotted 1px black;
+	@include push(1 of 7);
+	@include span(1 of 7);
+}
+
+.push.y {
+	border: solid 1px black;
+	@include push(1 of 7);
+	@include span(1 of 7);
+}
+
+.push.z {
+	border: dashed 1px black;
+	@include push(1 of 7);
+	@include span(1 of 7);
+}
