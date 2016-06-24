@@ -1,4 +1,4 @@
-// @import "~normalize.css/normalize.css";
+@import "~normalize.css/normalize.css";
 @import "~susy/sass/susy";
 
 $border: solid 1px black;
@@ -6,6 +6,7 @@ $border: solid 1px black;
 $susy: (
 	global-box-sizing: border-box, /* This should allow left/right borders to not impact layout */
 	gutters: 0,
+	columns: 1
 );
 
 body {
@@ -17,17 +18,12 @@ h1 {
 }
 
 .page {
-	@include span(3 of 4);
-	padding: 0px;
-	border-top: $border;
-	border-bottom: $border;
-	border-top-style: dotted;
-	border-bottom-style: dotted;
+	@include span(3 of 4 inside content-box);
+	background-color: #f99;
 }
 
 .sidebar {
-	@include span(1 of 4);
-	padding: 0px;
-	border-top: $border;
-	border-bottom: $border;
+	@include span(1 of 4 content-box);
+	background-color: #99f;
+	text-align: right;
 }

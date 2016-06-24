@@ -1,3 +1,2 @@
-console.log("Susy Su'ing...")
-
 require('./index.scss')
+require('./list-total.scss')

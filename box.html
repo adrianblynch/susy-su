@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			div {
+				border: 1px solid black;
+				width: 100px;
+				padding: 10px;
+				margin: 10px;
+			}
+			.content-box {
+				box-sizing: content-box;
+			}
+			.border-box {
+				box-sizing: border-box;
+			}
+			pre {
+				border: 1px solid #ccc;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content-box">Content</div>
+		<div class="border-box">Border</div>
+		<hr />
+		HTML:
+		<pre>&lt;div class="content-box">content-box&lt;/div>
+&lt;div class="border-box">border-box&lt;/div></pre>
+		CSS:
+		<pre>div {
+	border: 1px solid black;
+	width: 100px;
+	padding: 10px;
+	margin: 10px;
+}
+.content-box {
+	box-sizing: content-box;
+}
+.border-box {
+	box-sizing: border-box;
+}</pre>
+
+		<p>Setting the width on a `content-box` results in the padding and borders being added to the width.</p>
+		<p>100 + 10*2 + 1*2 = 122</p>
+
+		<p>Setting the width on a `border-box` results in the padding and borders being included in that width.</p>
+		<p>100 - 10*2 - 1*2 = 78</p>
+
+		<p>Margin doesn't come into the equation for either, only padding, border and content.</p>
+	</body>
+</html>
