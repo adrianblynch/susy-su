@@ -1,0 +1,27 @@
+@import "~susy/sass/susy";
+
+.broken-list-total {
+	ul {
+		border: solid 1px black;
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+		position: relative;
+		overflow: hidden;
+		li {
+			border: dotted 1px black;
+			float: left;
+		}
+		li:nth-child(2) {
+			clear: both;
+			border: dashed 1px black;
+		}
+		li:last-child {
+			float: right;
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			border: solid 1px black;
+		}
+	}
+}

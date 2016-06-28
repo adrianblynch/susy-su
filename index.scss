@@ -17,15 +17,19 @@ h1 {
 	border-bottom: $border;
 }
 
-.page {
-	@include span(3 of 4 inside content-box);
-	background-color: #f99;
-}
+.index {
 
-.sidebar {
-	@include span(1 of 4 content-box);
-	background-color: #99f;
-	text-align: right;
+	.page {
+		@include span(3 of 4 inside content-box);
+		background-color: #f99;
+	}
+
+	.sidebar {
+		@include span(1 of 4 content-box);
+		background-color: #99f;
+		text-align: right;
+	}
+
 }
 
 /* Collapsing margins */
