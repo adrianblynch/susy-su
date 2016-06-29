@@ -1,28 +1,56 @@
 @import "~susy/sass/susy";
 
+// Devices
+$mobile: 'max-width: 400px';
+$tablet: 'min-width: 401px'; // Replicate this in media queries then look for a SCSS/Susy way to shorten it
+$desktop: 'min-width: 900px';
+
 .general-constraint {
 	text-align: center;
+
+	/*
+	header::after {
+		@media($mobile) {
+			content: ' - Mobile'
+		}
+		@media($tablet) {
+			content: ' - Tablet'
+		}
+		@media($desktop) {
+			content: ' - Desktop'
+		}
+	}
+	*/
+
 	.page {
-		width: 900px;
+		max-width: 400px;
 		margin: 0px auto;
 		border: solid 0px black;
 	}
+
 	header {
 		border: dashed 1px black;
 		background-color: green;
 	}
+
 	.content {
+		div {
+
+		}
 		div:first-child {
 			@include span(1 of 2 inside no-gutters);
 			background-color: lightblue;
+			text-align: left;
+			padding-left: 10px
 		}
 		div:last-child {
 			@include span(1 of 2 inside no-gutters last);
 			background-color: springgreen;
+			text-align: right;
+			padding-right: 10px
 		}
 		overflow: hidden;
-		/* box-shadow: 400px 0px 0px 0px blueviolet; */
-		box-shadow: 900px 0px 0px 0px springgreen, -900px 0 0px 0px lightblue;
+		box-shadow: 400px 0px 0px 0px springgreen, -400px 0 0px 0px lightblue;
 	}
 	footer {
 		border: dotted 1px black;
