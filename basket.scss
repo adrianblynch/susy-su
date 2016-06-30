@@ -72,7 +72,7 @@ footer {
 	overflow: hidden;
 	section {
 		border: dashed 1px #aaa;
-		// When `medium`, put the sections onto one line - Widths are set below in the respective sections
+		// When `medium`, put the sections onto one line - Width is set below in the first section
 		@include breakpoint($from-small) {
 			// Temp: Change colour for `small`
 			background-color: yellow;
